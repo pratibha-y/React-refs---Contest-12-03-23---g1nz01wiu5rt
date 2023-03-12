@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from 'react'
+import React,{useState,useEffect,useRef} from 'react';
 import '../styles/App.css';
 const App = () => {
 
@@ -8,12 +8,12 @@ const App = () => {
   const[formInput,setFormInput]=useState({email:"",
                                           password:"",});
   const[displayMsg,setDisplayMsg]=useState({ emailMsg:"",passwordMsg:"",});
-  const handleInputeChange =(e)=>{
+  const handleInputChange =(e)=>{
     e.persist();
     e.target.id,e.target.value);
     if(e.target.value);
     if(e.traget.id ==="inputEmail"){
-      setFormaInput((state)=>{
+      setFormInput((state)=>{
         return{
           ...state,["email"]:e.target.value,};
       });
@@ -35,6 +35,11 @@ const App = () => {
       passwordMsg:"",
     });
   }
+   else if{formaInput.password ===""){
+     passwordRef.current.focus();
+     setDisplayMsg({
+      emailMsg:"",
+       password:"",});
   else{
     setDisplayMsg({
       emailMsg:formaInput.email,passwordMsg:formInput.password,});
@@ -47,10 +52,10 @@ const App = () => {
   return (
     <div id="main">
       Email
-      <input id="inputEmail" type="text" value={} ref={} onChange={}/><br/>
+      <input id="inputEmail" type="text" value={formInput.email} ref={emailRef} onChange={handleInputChange}/><br/>
       Password
-      <input id="inputPassword" type="text" value={} ref={} onChange={}/><br/>
-      <button id="submitButton" onClick={}>Submit</button><br/>
+      <input id="inputPassword" type="text" value={formInput.password} ref={passwordRef} onChange={handleInputChange}/><br/>
+      <button id="submitButton" onClick={handleSubmit}>Submit</button><br/>
       <p id="emailText">Your Email : {displayMsg.emailMsg}</p>
       <p id ="passwordText">Your Password : {displayMsg.passwordMsg}</p>
       
