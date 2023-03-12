@@ -10,7 +10,7 @@ const App = () => {
   const[displayMsg,setDisplayMsg]=useState({ emailMsg:"",passwordMsg:"",});
   const handleInputChange =(e)=>{
     e.persist();
-    e.target.id,e.target.value);
+   (e.target.id,e.target.value);
     if(e.target.value);
     if(e.traget.id ==="inputEmail"){
       setFormInput((state)=>{
@@ -26,23 +26,24 @@ const App = () => {
   };
   const handleSubmit =(e)=>{
     e.preventDefault();
-    if(formInput.email===")
+    if(formInput.email==="")
        
        {
        emailRef.current.focus();
     setDisplayMsg({
-      emailMs:"",
+      emailMsg:"",
       passwordMsg:"",
     });
   }
-   else if{formaInput.password ===""){
+   else if{formInput.password ===""){
      passwordRef.current.focus();
      setDisplayMsg({
       emailMsg:"",
-       password:"",});
+       passwordMMsg:"",});
+   }
   else{
     setDisplayMsg({
-      emailMsg:formaInput.email,passwordMsg:formInput.password,});
+      emailMsg:formInput.email,passwordMsg:formInput.password,});
     setFormInput({
       email:"",password"",});
   }
